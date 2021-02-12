@@ -15,9 +15,9 @@ class UserController extends Controller
         // return $user ;
         if ($user && Hash::check($req->password,$user->password)){
             // return session()->has();
+            $req->session()->put('user',$user);
             return redirect('/');
         } else {
-            $req->session()->put('user',$user);
             return "Email or passwors is noy matched";
         }
     }
