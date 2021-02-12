@@ -10,7 +10,7 @@
 
     {{-- @include('header') --}}
     {{View::make('header')}}
-    @yield('loginSection')
+    @yield('content')
     {{View::make('footer')}}
 
 
@@ -23,6 +23,9 @@
     .custom-login {
         height:412px;
         padding-top:100px;
+    }
+    .slider-text {
+        background-color: #34543585 !important;
     }
 </style>
 </html>
