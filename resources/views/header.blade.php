@@ -18,7 +18,7 @@
         </li>
        
         <li class="nav-item">
-          <a class="nav-link" href="#">Cart
+          <a class="nav-link" href="/cartlist">Cart
             <span class="badge badge-pill badge-danger">{{$total}}</span>
             </a>
         </li>

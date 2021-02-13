@@ -28,4 +28,7 @@ Route::get('/logout', function () {
     Session::forget('user');
     return redirect('/');
 });
+Route::get('/cartlist',[ProductController::class, 'cartlist']);
+Route::get('/remove_from_cart/{id}',[ProductController::class, 'RemoveFromCart']);
+
 
