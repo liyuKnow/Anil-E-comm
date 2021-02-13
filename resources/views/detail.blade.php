@@ -11,8 +11,12 @@
             <h3>price ${{$product['price']}}</h3>
             <p>{{$product['description']}}</p>
             <br><br>
-            <a href="" class="btn btn-success">Buy Now</a>
-            <a href="" class="btn btn-warning">Add To Cart</a>
+            <form action="/add_to_cart" method="POST">
+                @csrf
+                <input type="text" name="product_id" value="{{$product['id']}}" hidden>
+                <button type="submit" class="btn btn-success">Add To Cart</button>
+            </form>
+            {{-- <a href="" class="btn btn-warning"></a> --}}
         </div>
     </div>
 </div>
