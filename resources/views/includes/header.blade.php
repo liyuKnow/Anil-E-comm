@@ -14,7 +14,7 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Orders</a>
+          <a class="nav-link" href="/myorders">Orders</a>
         </li>
        
         <li class="nav-item">
@@ -35,6 +35,9 @@
         @else
           <li class="nav-item">
             <a class="nav-link btn btn-outline-success" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-success" href="/register">Register</a>
           </li>
         @endif
         

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
     <title>E Commerce App</title>
 </head>
 <body>
 
     {{-- @include('header') --}}
-    {{View::make('header')}}
+    {{View::make('includes/header')}}
     @yield('content')
-    {{View::make('footer')}}
+    {{View::make('includes/footer')}}
 
 
 
@@ -20,12 +21,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 <style>
-    .custom-login {
-        height:412px;
-        padding-top:100px;
-    }
-    .slider-text {
-        background-color: #34543585 !important;
-    }
+    
 </style>
 </html>

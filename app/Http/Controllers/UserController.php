@@ -18,7 +18,22 @@ class UserController extends Controller
             $req->session()->put('user',$user);
             return redirect('/');
         } else {
-            return "Email or passwors is noy matched";
+            return "Email or passwors is not matched";
         }
+    }
+
+    function registerForm (Request $req) {
+        $user = new User;
+
+        $user->name = $req->name;
+        $user->email = $req->email;
+        if ($req->password == $req->confirmed_password) {
+            $user->password = Hash::make($req->password);
+        } else {
+            return "password is not matched";
+        }
+        $user->save();
+
+        return redirect('/login');
     }
 }

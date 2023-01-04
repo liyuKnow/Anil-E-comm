@@ -14,21 +14,33 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Home page
 Route::get('/',[ProductController::class, 'index']);
+
+// Register view and form action
+Route::view('/register','user/register');
+Route::post('/register_form',[UserController::class, 'registerForm']);
+
+// Login view and Action from form
 Route::get('/login', function () {
-    return view('login');
+    return view('user/login');
 });
 Route::post('/login',[UserController::class, 'login']);
-
-Route::get('detail/{id}',[ProductController::class, 'detail']);
-Route::get('search',[ProductController::class, 'search']);
-Route::post('/add_to_cart',[ProductController::class, 'addToCart']);
+// Logout Action
 Route::get('/logout', function () {
     Session::forget('user');
     return redirect('/');
 });
+
+// Products Section
+Route::get('detail/{id}',[ProductController::class, 'detail']);
+Route::get('search',[ProductController::class, 'search']);
+Route::post('/add_to_cart',[ProductController::class, 'addToCart']);
 Route::get('/cartlist',[ProductController::class, 'cartlist']);
 Route::get('/remove_from_cart/{id}',[ProductController::class, 'RemoveFromCart']);
+Route::get('/order_now',[ProductController::class, 'orderNow']);
+Route::post('/placeorder',[ProductController::class, 'placeOrder']);
+Route::get('/myorders',[ProductController::class, 'myOrders']);
+
 
 

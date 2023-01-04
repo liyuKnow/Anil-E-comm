@@ -1,7 +1,9 @@
 @extends('master')
 @section('content')
 <div class="container">
-    <button class="btn btn-secondary m-5">Filter</button>
+    <h2>Your Cart Items</h2>
+    <button class="btn btn-secondary m-2">Filter</button>
+    <a class="btn btn-primary btn-lg ml-5" href="/order_now">Order Now</a>        
     <table class="table mb-5">
         <tr>
             <th>Id</th>
